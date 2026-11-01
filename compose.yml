@@ -1,14 +1,16 @@
 services:
   web1:
-    image: myimg
+    build: .
+    image: shriyadd/myimg:latest
     container_name: my-cont1
     ports:
       - "8002:80"
     restart: always
 
   web2:
-    image: myimg
-    container_name: my-cont1
+    build: .
+    image: shriyadd/myimg2:latest
+    container_name: my-cont2
     ports:
       - "8003:80"
     restart: always
